@@ -4,141 +4,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
   	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width">
-	<style>
-		*{
-			-web-kit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			box-sizing: border-box;
-			font-family: 'Helvetica'
-		}
-
-		g.box:hover {
-			cursor: pointer;
-			opacity:0.5;
-
-		}
-
-		g.box rect:hover{
-			width: 15px;
-			height: 15px;
-			-moz-transform: translate(-2px, -2px);
-		    -ms-transform: translate(-2px, -2px);
-		    -o-transform: translate(-2px, -2px);
-		    -webkit-transform: translate(-2px, -2px);
-		    transform: translate(-2px, -2px)
-			
-		}
-
-		g.box rect{
-			height: 12px;
-			width: 12px;
-			-moz-transform: translate(0px, 0px);
-		    -ms-transform: translate(0px, 0px);
-		    -o-transform: translate(0px, 0px);
-		    -webkit-transform: translate(0px, 0px);
-		    transform: translate(0px, 0px)
-		}
-
-		#tooltip {
-			position: absolute;
-			top: 10px;
-			left: 10px;
-			background: rgba(255, 255, 255, .92);
-			height: auto;
-			width: 170px;
-			border: 1px solid lightgray;
-			display: none;
-			text-align: center;
-			padding: 10px;
-			font-size: 12px;
-			box-shadow: 1px 1px 10px lightgray;
-			line-height: 17px;
-		}
-
-		#tooltip:hover{
-			/*position: fixed;*/
-			display: block;
-		}
-
-		#tooltip.visible{
-			display: block;
-		}
-
-		#tooltipbox{
-			position: relative;
-		}
-
-		#tailShadow {
-		    position:absolute;
-		    bottom:40px;
-		    left:-15px;
-		    width:0;height:0;
-		    border:solid 2px #fff;
-		    box-shadow:0 0 10px 1px #555;
-		}
-
-		#tail1 {
-		    position:absolute;
-		    bottom:31px;
-		    left:-30px;
-		    width:0;height:0;
-		    border-color: transparent lightgray transparent  transparent;
-		    border-width:10px;
-		    border-style:solid;
-		}
-
-		#tail2 {
-		    position:absolute;
-		    bottom:30px;
-		    left:-30px;
-		    width:0;height:0;
-		    border-color: transparent #007B73 transparent  transparent ;
-		    border-width:10px;
-		    border-style:solid;
-		}
-
-		a {
-			color: #007B73
-		}
-
-		a:hover{
-			color: darkgray
-		}
-
-		h2{
-			color: #007B73;
-			font-size: 20px;
-			font-weight: 700;
-		}
-
-		h3{
-			font-weight: 500;
-			font-size: 18px;
-		}
-
-		#title{
-			padding: 30px
-		}
-
-		.box[status="active"]{
-			opacity:0.5;
-		}
-
-		.box[status="active"] rect{
-			width: 16px;
-			height: 16px;
-			-moz-transform: translate(-2px, -2px);
-		    -ms-transform: translate(-2px, -2px);
-		    -o-transform: translate(-2px, -2px);
-		    -webkit-transform: translate(-2px, -2px);
-		    transform: translate(-2px, -2px)
-		    
-		}
-	</style>
+	<link href="css/styles.css" rel="stylesheet">
 	<title>Trump</title>
 </head>
 <body>
-<div id = 'title'>
+<div id = 'desktop'>
+	<div id = 'title'>
 		<h2>Sections on the Huffington Post under which stories tagged ‘Donald Trump’ show up</h2>
 		<h3>(17th -24th July 2015)</h3>
 	</div>
@@ -563,6 +434,10 @@
 		    <div id="tail2"></div>
 		</div>
 	</div>
+</div>
+<div id = 'mobile'>
+	<img src = '/img/donaldcoverage.png'>
+</div>
 	<script type="text/javascript" src="js/thirdparty/d3.v3.min.js"></script>
 	<script type="text/javascript" src="js/thirdparty/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="js/thirdparty/underscore-min.js"></script>
