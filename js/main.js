@@ -17,7 +17,7 @@
 		    var usingid = $(this).attr('data-id');
 		    baketooltip(usingid);
 		    $(this).addClass('active');
-		    console.log(tooltip_height)
+		    // console.log(tooltip_height)
 
 		    $('#tail1').css({
 		    	bottom:tooltip_height/2-arrowbuffer,
@@ -56,6 +56,11 @@
 			$('.section').html('was published in the '+obj.publishedin+' section.')
 			$('.box[data-id="'+id+'"]').attr('status','active');
 			$('#tooltip').attr('activeid',id)
+			if ($('.box[data-id="'+id+'"]').attr('changed-status')==='true'){
+				$('.changed').html('It was previously posted in the Huffpost Politics section.')
+			} else {
+				$('.changed').html('');
+			}
 		}
 	});
 
