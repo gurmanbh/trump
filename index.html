@@ -19,13 +19,14 @@
 		}
 
 		g.box rect:hover{
-			width: 14px;
-			height: 14px;
-			-moz-transform: translate(-1px, -1px);
-		    -ms-transform: translate(-1px, -1px);
-		    -o-transform: translate(-1px, -1px);
-		    -webkit-transform: translate(-1px, -1px);
-		    transform: translate(-1px, -1px)
+			width: 15px;
+			height: 15px;
+			-moz-transform: translate(-2px, -2px);
+		    -ms-transform: translate(-2px, -2px);
+		    -o-transform: translate(-2px, -2px);
+		    -webkit-transform: translate(-2px, -2px);
+		    transform: translate(-2px, -2px)
+		    fill:"black"!important;
 			
 		}
 
@@ -43,7 +44,7 @@
 			position: absolute;
 			top: 10px;
 			left: 10px;
-			background: rgba(255, 255, 255, .85);
+			background: rgba(255, 255, 255, .92);
 			height: auto;
 			width: 170px;
 			border: 1px solid lightgray;
@@ -70,8 +71,8 @@
 
 		#tailShadow {
 		    position:absolute;
-		    bottom:-18px;
-		    left:65px;
+		    bottom:40px;
+		    left:-15px;
 		    width:0;height:0;
 		    border:solid 2px #fff;
 		    box-shadow:0 0 10px 1px #555;
@@ -79,25 +80,25 @@
 
 		#tail1 {
 		    position:absolute;
-		    bottom:-31px;
-		    left:58px;
+		    bottom:31px;
+		    left:-30px;
 		    width:0;height:0;
-		    border-color:lightgray transparent transparent transparent;
+		    border-color: transparent lightgray transparent  transparent;
 		    border-width:10px;
 		    border-style:solid;
 		}
 
 		#tail2 {
 		    position:absolute;
-		    bottom:-30px;
-		    left:58px;
+		    bottom:30px;
+		    left:-30px;
 		    width:0;height:0;
-		    border-color:#f9f9f9 transparent transparent transparent;
+		    border-color: transparent #007B73 transparent  transparent ;
 		    border-width:10px;
 		    border-style:solid;
 		}
 
-		g.box.active rect{
+		g.box rect{
 			fill:"#007B73"!important;
 		}
 
