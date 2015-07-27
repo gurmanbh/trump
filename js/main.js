@@ -3,8 +3,9 @@
 	d3.csv ('data/trump.csv', function(error, dataset){
 		
 		$('.box').on('mousemove', function(e){
+			$('.box').attr('status','inactive')
 
-		    var buffer = 55;
+		    var buffer = 58;
 		    arrowbuffer = 5;
 		    var tooltip_height= $('#tooltip').height();
 		    var tooltip_width = $('#tooltip').width();
@@ -31,23 +32,30 @@
 			    left: -14
 			})
 
+
 		});
 		$('.box').on('mouseout', function(e){
 		    $('#tooltip').removeClass('visible');
 		});
 
 		$('#tooltip').on('mousemove',function(e){
+			var id = $(this).attr('activeid');
 			var buffer = 40;
 			$('#tooltip').addClass('visible');
+			$('.box[data-id="'+id+'"]').attr('status','active');
 		})
 
 		$('#tooltip').on('mouseout',function(e){
+
 			$('#tooltip').removeClass('visible');
+			$('.box').attr('status','inactive')
 		})
 		function baketooltip(id){
 			var obj = _.findWhere(dataset,{'id':id});
 			$('.headline').html('<a target="_blank" href="'+obj.link+'">'+obj.headline.split('|')[0].trim()+'</a>')
 			$('.section').html('was published in the '+obj.publishedin+' section.')
+			$('.box[data-id="'+id+'"]').attr('status','active');
+			$('#tooltip').attr('activeid',id)
 		}
 	});
 
